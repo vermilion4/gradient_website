@@ -25,7 +25,7 @@
 
 ![Preview image](./src/assets/preview.png)
 
-[Live Link]()
+[Live Link](http://vermilion4.github.io/gradient_website)
 
 ### How to run locally
 
