@@ -12,11 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #fff;
 }
 .prev,
 .next {
   padding: 1rem;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.282);
   border: none;
   transition: all 0.3s ease-in;
 }

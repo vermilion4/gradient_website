@@ -35,11 +35,15 @@ const Navbar = ({ colorOne, colorTwo }) => {
       </div>
       <div className='social'>
         <span>
-          Source Code: <FontAwesomeIcon icon={faGithub} className='icon' />
+          <a
+            href='https://github.com/vermilion4/gradient_website'
+            target='_blank'>
+            Source Code: <FontAwesomeIcon icon={faGithub} className='icon' />
+          </a>
         </span>
         <span>
-          Follow Me:
           <a href='https://twitter.com/what_is_a_swat' target='_blank'>
+            Follow Me:
             <FontAwesomeIcon icon={faTwitter} className='icon twitter' />
           </a>
         </span>
