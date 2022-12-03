@@ -59,7 +59,7 @@ nav {
 @media (max-width: 900px) {
   nav {
     flex-direction: column;
-    height: 150px;
+    height: 140px;
   }
   .logo {
     justify-content: center;
