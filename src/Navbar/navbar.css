@@ -5,12 +5,18 @@ a:-webkit-any-link {
   color: #000;
 }
 .navbar {
+  width: 100%;
+  padding: 0.3rem 2rem;
+  margin: auto;
+  border: 1px solid black;
+}
+nav {
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
-  padding: 0.3rem 2rem;
-  border: 1px solid black;
+  max-width: 1200px;
+  margin: auto;
 }
 .logo {
   font-family: cursive;
@@ -51,7 +57,7 @@ a:-webkit-any-link {
 }
 
 @media (max-width: 900px) {
-  .navbar {
+  nav {
     flex-direction: column;
     height: 150px;
   }
