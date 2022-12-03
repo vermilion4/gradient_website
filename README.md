@@ -18,8 +18,8 @@
 
 ### How to run locally
 
-- Clone the repo into your local machine
-- cd into the folder (gradient_website) -[cd gradient_website]
+- Clone the day-2 branch into your local machine [git clone -b <branchname> --single-branch <remote-repo-url>]
+- cd into the folder (i.e gradient_website) -[cd gradient_website]
 - Run 'npm install' in your terminal to install all dependencies
 - Run 'npm start' to start the server
 - Have fun 🥳
