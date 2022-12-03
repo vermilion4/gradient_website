@@ -127,7 +127,7 @@ const Navbar = ({
           <div className='social'>
             <span>
               <a
-                href='https://github.com/vermilion4/gradient_website_v2'
+                href='https://github.com/vermilion4/gradient_website/tree/day-2'
                 target='_blank'>
                 Source Code:{' '}
                 <FontAwesomeIcon icon={faGithub} className='icon' />
