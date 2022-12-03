@@ -1,25 +1,14 @@
-# Day 1
+# Day 2
 
-## A sequential background color changing gradient website.
+## A sequential background color changing gradient website. (Version 2)
 
-### About the Project
+### Added Features
 
-- A one page website that changes its background gradient sequentially on clicking on the previous and next button.
-- The initial background gradient on viewing the page for the first time is (#780206 and #061161).
-- A default list of background colors is used. (As referenced below)
-
-### Default Gradient List
-
-- #FBD3E9, #BB377D
-- #00d2ff, #3a7bd5
-- #f2709c, #ff9472
-- #a73737, #7a2828
-- #4b6cb7, #182848
-- #C04848, #480048
-- #5f2c82, #49a09d
-- #232526, #414345
-- #5C258D, #4389A2
-- #4776E6, #8E54E9
+- A beautiful page loader on a white background that shows on loading the page
+- A button to add more gradients to the default gradient list
+- A button to view and copy the css for the gradient website.
+- A hamburger icon with this text beside it “View all gradients” containing all the gradients as cards
+- A creative name for each gradient card in the "View all"
 
 ### Preview
 
