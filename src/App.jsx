@@ -59,6 +59,11 @@ const App = () => {
     setColorTwo(list[counter].colorTwo);
   }, [counter]);
 
+  const foundName = list.find((item) => {
+    return item.colorOne === colorOne;
+  });
+  console.log(foundName);
+
   if (isLoading) return <Loader />;
   return (
     <div style={{ position: 'relative' }}>
@@ -82,6 +87,7 @@ const App = () => {
           background: `-webkit-linear-gradient(to right, ${colorOne}, ${colorTwo})`,
           background: `linear-gradient(to right, ${colorOne}, ${colorTwo})`,
         }}>
+        <div className='name'>{foundName.name}</div>
         <div className={`${showOverlay ? 'overlay' : 'off-screen'}`}>
           <div className='pallete-container'>
             {list.map((item) => {

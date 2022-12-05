@@ -13,6 +13,14 @@ body {
   margin-top: 109px;
   position: relative;
 }
+.name {
+  font-size: x-large;
+  font-family: cursive;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  color: #fff;
+}
 .buttons {
   display: flex;
   align-items: center;
@@ -73,8 +81,8 @@ body {
 
 @media (max-width: 900px) {
   .gradient-body {
-    min-height: calc(100vh - 170px - 1rem);
-    margin-top: 185px;
+    min-height: calc(100vh - 220px - 1rem);
+    margin-top: 235px;
   }
   .pallete-container {
     grid-template-columns: repeat(2, 1fr);
