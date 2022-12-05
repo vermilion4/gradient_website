@@ -75,13 +75,11 @@ const Navbar = ({
           zIndex: '20',
         },
         content: {
-          position: 'absolute',
-          top: '25%',
-          left: '20%',
-          right: '20%',
-          bottom: '20%',
+          height: 'fit-content',
           transition: 'all 0.7s ease-in-out',
           overflowY: 'visible',
+          maxWidth: '600px',
+          margin: 'auto',
         },
       })
     : (modalStyle = {
@@ -90,12 +88,12 @@ const Navbar = ({
           zIndex: '20',
         },
         content: {
-          position: 'absolute',
-          top: '150px',
-          left: '20px',
-          right: '20px',
+          height: 'fit-content',
           transition: 'all 0.7s ease-in-out',
           overflowY: 'visible',
+          width: '80%',
+          margin: 'auto',
+          maxWidth: '500px',
         },
       });
 
@@ -129,20 +127,15 @@ const Navbar = ({
             </span>
           </div>
           <div className='social'>
-            <span>
-              <a
-                href='https://github.com/vermilion4/gradient_website/tree/day-2'
-                target='_blank'>
-                Source Code:{' '}
-                <FontAwesomeIcon icon={faGithub} className='icon' />
-              </a>
-            </span>
-            <span>
-              <a href='https://twitter.com/what_is_a_swat' target='_blank'>
-                Follow Me:
-                <FontAwesomeIcon icon={faTwitter} className='icon twitter' />
-              </a>
-            </span>
+            <a
+              href='https://github.com/vermilion4/gradient_website/tree/day-2'
+              target='_blank'>
+              Source Code: <FontAwesomeIcon icon={faGithub} className='icon' />
+            </a>
+            <a href='https://twitter.com/what_is_a_swat' target='_blank'>
+              Follow Me:
+              <FontAwesomeIcon icon={faTwitter} className='icon twitter' />
+            </a>
           </div>
         </nav>
       </div>
