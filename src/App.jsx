@@ -69,7 +69,6 @@ const App = () => {
   const foundName = list.find((item) => {
     return item.colorOne === colorOne;
   });
-  console.log(foundName);
 
   if (isLoading) return <Loader />;
   return (
