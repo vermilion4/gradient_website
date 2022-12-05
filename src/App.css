@@ -91,7 +91,7 @@ body {
     border: none;
   }
   .overlay {
-    top: 44px;
+    top: 5px;
     transition: all ease-in 0.6s;
   }
   .off-screen {
