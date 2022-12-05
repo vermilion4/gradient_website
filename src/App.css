@@ -116,3 +116,10 @@ body {
     opacity: 0;
   }
 }
+
+@media (max-height: 600px) and (max-width: 900px) {
+  .gradient-body {
+    min-height: calc(100vh - 165px - 1rem);
+    margin-top: 180px;
+  }
+}

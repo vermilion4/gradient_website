@@ -189,3 +189,9 @@ nav,
     height: fit-content;
   }
 }
+
+@media (max-height: 600px) and (max-width: 900px) {
+  .bottom-nav {
+    display: none;
+  }
+}
