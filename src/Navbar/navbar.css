@@ -30,7 +30,7 @@ nav,
   margin: auto;
 }
 .bottom-nav-content {
-  height: 30px;
+  height: 40px;
 }
 .viewall {
   display: flex;
@@ -157,7 +157,7 @@ nav,
     gap: 1rem;
   }
   .bottom-nav-content {
-    height: 80px;
+    height: 90px;
   }
   .logo {
     justify-content: center;
