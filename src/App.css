@@ -67,7 +67,7 @@ body {
   padding: 2rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  border: 3px solid #e6e6e6;
+  border: none;
 }
 .pallete {
   border-radius: 10px;
@@ -94,7 +94,6 @@ body {
   }
   .pallete-container {
     grid-template-columns: repeat(2, 1fr);
-    border: none;
   }
   .overlay {
     top: 0;
