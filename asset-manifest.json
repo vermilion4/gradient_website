@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gradient_website/static/css/main.51cdc2cd.css",
-    "main.js": "/gradient_website/static/js/main.3d148fcc.js",
+    "main.css": "/gradient_website/static/css/main.77ba2b08.css",
+    "main.js": "/gradient_website/static/js/main.c4f1ee8b.js",
     "react-syntax-highlighter/refractor-core-import.js": "/gradient_website/static/js/react-syntax-highlighter/refractor-core-import.44fc5bcb.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/gradient_website/static/js/react-syntax-highlighter_languages_refractor_abap.2f186f5a.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/gradient_website/static/js/react-syntax-highlighter_languages_refractor_actionscript.da3c5905.chunk.js",
@@ -156,8 +156,8 @@
     "react-syntax-highlighter_languages_refractor_yaml.js": "/gradient_website/static/js/react-syntax-highlighter_languages_refractor_yaml.a1dcbeaa.chunk.js",
     "static/media/GS.png": "/gradient_website/static/media/GS.c405fe2fe5d54c4ef9d0.png",
     "index.html": "/gradient_website/index.html",
-    "main.51cdc2cd.css.map": "/gradient_website/static/css/main.51cdc2cd.css.map",
-    "main.3d148fcc.js.map": "/gradient_website/static/js/main.3d148fcc.js.map",
+    "main.77ba2b08.css.map": "/gradient_website/static/css/main.77ba2b08.css.map",
+    "main.c4f1ee8b.js.map": "/gradient_website/static/js/main.c4f1ee8b.js.map",
     "refractor-core-import.44fc5bcb.chunk.js.map": "/gradient_website/static/js/react-syntax-highlighter/refractor-core-import.44fc5bcb.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.2f186f5a.chunk.js.map": "/gradient_website/static/js/react-syntax-highlighter_languages_refractor_abap.2f186f5a.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.da3c5905.chunk.js.map": "/gradient_website/static/js/react-syntax-highlighter_languages_refractor_actionscript.da3c5905.chunk.js.map",
@@ -312,7 +312,7 @@
     "react-syntax-highlighter_languages_refractor_yaml.a1dcbeaa.chunk.js.map": "/gradient_website/static/js/react-syntax-highlighter_languages_refractor_yaml.a1dcbeaa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51cdc2cd.css",
-    "static/js/main.3d148fcc.js"
+    "static/css/main.77ba2b08.css",
+    "static/js/main.c4f1ee8b.js"
   ]
 }
