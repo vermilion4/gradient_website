@@ -129,10 +129,14 @@ const Navbar = ({
           <div className='social'>
             <a
               href='https://github.com/vermilion4/gradient_website/tree/day-2'
-              target='_blank'>
+              target='_blank'
+              rel='noreferrer'>
               Source Code: <FontAwesomeIcon icon={faGithub} className='icon' />
             </a>
-            <a href='https://twitter.com/what_is_a_swat' target='_blank'>
+            <a
+              href='https://twitter.com/what_is_a_swat'
+              target='_blank'
+              rel='noreferrer'>
               Follow Me:
               <FontAwesomeIcon icon={faTwitter} className='icon twitter' />
             </a>

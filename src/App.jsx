@@ -1,10 +1,11 @@
+/*eslint no-dupe-keys: "off"*/
 import React from 'react';
 import Navbar from './Navbar/Navbar';
 import { faLessThan, faGreaterThan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from 'react';
 import { colors } from './Colors';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Loader from './Loader/Loader';
@@ -59,12 +60,12 @@ const App = () => {
         setIsLoading(false);
       }, 3000);
     }
-  }, []);
+  }, [isLoading]);
 
   useEffect(() => {
     setColorOne(list[counter].colorOne);
     setColorTwo(list[counter].colorTwo);
-  }, [counter]);
+  }, [counter, list]);
 
   const foundName = list.find((item) => {
     return item.colorOne === colorOne;
@@ -92,6 +93,7 @@ const App = () => {
       />
       <div
         className='gradient-body'
+        key={newId}
         style={{
           background: `${colorOne}`,
           background: `-webkit-linear-gradient(to right, ${colorOne}, ${colorTwo})`,
@@ -103,6 +105,7 @@ const App = () => {
             {list.map((item) => {
               return (
                 <div
+                  key={item.id}
                   className='pallete'
                   style={{
                     background: `${item.colorOne}`,
