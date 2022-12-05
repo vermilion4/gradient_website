@@ -47,7 +47,7 @@ nav,
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: 30%;
+  width: 25%;
 }
 .logo-img {
   width: 15%;
@@ -80,7 +80,6 @@ nav,
 }
 .action-btns {
   display: flex;
-  gap: 1rem;
 }
 .action-btns button {
   padding: 0.5rem 0.8rem;
@@ -93,6 +92,9 @@ nav,
 .action-btns button:hover {
   background-color: rgba(0, 0, 0, 0.438);
   cursor: pointer;
+}
+.add {
+  margin-right: 1rem;
 }
 .close-icon {
   padding: 0.5rem;
