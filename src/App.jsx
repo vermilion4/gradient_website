@@ -4,6 +4,8 @@ import { faLessThan, faGreaterThan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from 'react';
 import { colors } from './Colors';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Loader from './Loader/Loader';
 
@@ -17,6 +19,8 @@ const App = () => {
   const [list, setList] = useState(colors);
   const [newId, setNewId] = useState(colors.length);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [showCssModal, setShowCssModal] = useState(false);
+  const [showGradientModal, setShowGradientModal] = useState(false);
   let [counter, setCounter] = useState(0);
 
   const handleAdd = () => {
@@ -28,6 +32,9 @@ const App = () => {
       name: colorName,
     });
     setList(updatedList);
+    setCounter(newId);
+    toast.success('Gradient Added!');
+    setShowGradientModal(false);
   };
   const handleShowAll = () => {
     setShowOverlay(true);
@@ -79,6 +86,10 @@ const App = () => {
         setFromColor={setFromColor}
         setToColor={setToColor}
         setColorName={setColorName}
+        showCssModal={showCssModal}
+        setShowCssModal={setShowCssModal}
+        showGradientModal={showGradientModal}
+        setShowGradientModal={setShowGradientModal}
       />
       <div
         className='gradient-body'

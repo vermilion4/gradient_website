@@ -13,6 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from '../assets/GS.png';
 import { useState, useEffect } from 'react';
 import Modal from '../Modal';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = ({
   handleShowAll,
@@ -26,10 +28,11 @@ const Navbar = ({
   setToColor,
   setColorName,
   showOverlay,
+  showCssModal,
+  setShowCssModal,
+  showGradientModal,
+  setShowGradientModal,
 }) => {
-  const [showCssModal, setShowCssModal] = useState(false);
-  const [showGradientModal, setShowGradientModal] = useState(false);
-
   const [width, setWidth] = useState(window.innerWidth);
 
   const handleOpenCssModal = () => {
@@ -98,6 +101,7 @@ const Navbar = ({
 
   return (
     <div className='navbar'>
+      <ToastContainer />
       <div className='top-nav'>
         <nav>
           <div className='logo'>
@@ -232,6 +236,8 @@ const Navbar = ({
                   <button
                     onClick={(e) => {
                       navigator.clipboard.writeText(codeBlock);
+                      toast.success('Copied!');
+                      handleCloseCssModal();
                     }}>
                     Copy to Clipboard
                   </button>
