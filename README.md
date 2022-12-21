@@ -1,24 +1,18 @@
-# Day 2
+# Refactoring
 
-## A sequential background color changing gradient website. (Version 2)
+## A sequential background color changing gradient website.
 
-### Added Features
+### Goals
 
-- A beautiful page loader on a white background that shows on loading the page
-- A button to add more gradients to the default gradient list
-- A button to view and copy the css for the gradient website.
-- A hamburger icon with this text beside it “View all gradients” containing all the gradients as cards
-- A creative name for each gradient card in the "View all"
+Code refactoring is one of the main key terms in software development nowadays. By definition, it is the process of editing and simplifying the software code, without changing its behaviour. Today’s task is to see how well you can refactor a codebase
 
-### Preview
-
-![Preview image](./src/assets/preview.png)
+- Refactor Gradient website codebase
 
 [Live Link](http://vermilion4.github.io/gradient_website)
 
 ### How to run locally
 
-- Clone the day-2 branch into your local machine [git clone -b [branchname] --single-branch [remote-repo-url]]
+- Clone the refactoring branch into your local machine [git clone -b [branchname] --single-branch [remote-repo-url]]
 - cd into the folder (i.e gradient_website) -[cd gradient_website]
 - Run 'npm install' in your terminal to install all dependencies
 - Run 'npm start' to start the server
