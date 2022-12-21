@@ -4,7 +4,7 @@ import Navbar from './Navbar/Navbar';
 import { faLessThan, faGreaterThan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from 'react';
-import { colors } from './Colors';
+import { colors } from './data/Colors';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';

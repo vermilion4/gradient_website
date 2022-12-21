@@ -1,20 +1,19 @@
 import React from 'react';
-import { CopyBlock, dracula } from 'react-code-blocks';
+
 import './navbar.css';
 import {
   faArrowRight,
   faPlusCircle,
   faClipboard,
-  faHamburger,
-  faClose,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from '../assets/GS.png';
 import { useState, useEffect } from 'react';
-import Modal from '../Modal';
-import { ToastContainer, toast } from 'react-toastify';
+import Modal from '../Modal/Modal';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Overlay from '../components/Overlay';
 
 const Navbar = ({
   handleShowAll,
@@ -47,10 +46,22 @@ const Navbar = ({
   const handleCloseGradientModal = () => {
     setShowGradientModal(false);
   };
-  const codeBlock = `
-  background: ${colorOne}; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, ${colorOne}, ${colorTwo}); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, ${colorOne}, ${colorTwo}); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */`;
+  const socialArr = [
+    {
+      id: 1,
+      link: 'https://github.com/vermilion4/gradient_website/tree/day-2',
+      text: 'Source Code',
+      icon: faGithub,
+      classname: 'icon',
+    },
+    {
+      id: 2,
+      link: 'https://twitter.com/what_is_a_swat',
+      text: 'Follow Me',
+      icon: faTwitter,
+      classname: 'icon twitter',
+    },
+  ];
 
   const getWidth = () => {
     return window.innerWidth;
@@ -67,13 +78,15 @@ const Navbar = ({
     };
   }, []);
 
-  let modalStyle = {};
+  let modalStyle = {
+    overlay: {
+      backgroundColor: 'rgba(22, 21, 21, 0.222)',
+      zIndex: '20',
+    },
+  };
   width > 600
     ? (modalStyle = {
-        overlay: {
-          backgroundColor: 'rgba(22, 21, 21, 0.222)',
-          zIndex: '20',
-        },
+        ...modalStyle,
         content: {
           height: 'fit-content',
           transition: 'all 0.7s ease-in-out',
@@ -83,10 +96,7 @@ const Navbar = ({
         },
       })
     : (modalStyle = {
-        overlay: {
-          backgroundColor: 'rgba(22, 21, 21, 0.222)',
-          zIndex: '20',
-        },
+        ...modalStyle,
         content: {
           height: 'fit-content',
           transition: 'all 0.7s ease-in-out',
@@ -127,19 +137,14 @@ const Navbar = ({
             </span>
           </div>
           <div className='social'>
-            <a
-              href='https://github.com/vermilion4/gradient_website/tree/day-2'
-              target='_blank'
-              rel='noreferrer'>
-              Source Code: <FontAwesomeIcon icon={faGithub} className='icon' />
-            </a>
-            <a
-              href='https://twitter.com/what_is_a_swat'
-              target='_blank'
-              rel='noreferrer'>
-              Follow Me:
-              <FontAwesomeIcon icon={faTwitter} className='icon twitter' />
-            </a>
+            {socialArr.map((social) => {
+              const { id, link, text, icon, classname } = social;
+              return (
+                <a key={id} href={link} target='_blank' rel='noreferrer'>
+                  {text}: <FontAwesomeIcon icon={icon} className={classname} />
+                </a>
+              );
+            })}
           </div>
         </nav>
       </div>
@@ -147,27 +152,9 @@ const Navbar = ({
         <div className='bottom-nav-content'>
           <div className='viewall'>
             {showOverlay ? (
-              <>
-                <FontAwesomeIcon
-                  className='clickable'
-                  onClick={handleCloseAll}
-                  icon={faClose}
-                />
-                <span className='clickable' onClick={handleCloseAll}>
-                  View all gradients
-                </span>
-              </>
+              <Overlay closeAll handleCloseAll={handleCloseAll} />
             ) : (
-              <>
-                <FontAwesomeIcon
-                  className='clickable'
-                  onClick={handleShowAll}
-                  icon={faHamburger}
-                />
-                <span className='clickable' onClick={handleShowAll}>
-                  View all gradients
-                </span>
-              </>
+              <Overlay showAll handleShowAll={handleShowAll} />
             )}
           </div>
           <div className='action-btns'>
@@ -176,73 +163,27 @@ const Navbar = ({
             </button>
 
             <Modal
-              content={
-                <div className='add-gradient'>
-                  <h2>Add Gradient</h2>
-                  <label htmlFor='from'>From:</label>
-                  <div className='from-input'>
-                    <input
-                      id='from'
-                      type='text'
-                      onChange={(e) => setFromColor(e.target.value)}
-                      placeholder='e.g: #fff'
-                    />
-                    <span
-                      className='from-color'
-                      style={{ backgroundColor: `${fromColor}` }}></span>
-                  </div>
-                  <label htmlFor='to'>To:</label>
-                  <div className='to-input'>
-                    <input
-                      id='to'
-                      type='text'
-                      onChange={(e) => setToColor(e.target.value)}
-                      placeholder='e.g: #000'
-                    />
-                    <span
-                      className='to-color'
-                      style={{ backgroundColor: `${toColor}` }}></span>
-                  </div>
-                  <label htmlFor='color-name'>Unique Name</label>
-                  <input
-                    id='to'
-                    type='text'
-                    onChange={(e) => setColorName(e.target.value)}
-                    placeholder='e.g: Daring Red'
-                  />
-                  <button onClick={handleAdd}>Save</button>
-                </div>
-              }
+              add
               showModal={showGradientModal}
               modalStyle={modalStyle}
               handleCloseModal={handleCloseGradientModal}
+              handleAdd={handleAdd}
+              fromColor={fromColor}
+              toColor={toColor}
+              setFromColor={setFromColor}
+              setToColor={setToColor}
+              setColorName={setColorName}
             />
             <button onClick={handleOpenCssModal} className='copy'>
               Copy CSS <FontAwesomeIcon icon={faClipboard} />
             </button>
             <Modal
-              content={
-                <div className='copy-css'>
-                  <h2>Copy CSS code</h2>
-                  <CopyBlock
-                    text={codeBlock}
-                    language='javascript'
-                    theme={dracula}
-                    wrapLines
-                  />
-                  <button
-                    onClick={(e) => {
-                      navigator.clipboard.writeText(codeBlock);
-                      toast.success('Copied!');
-                      handleCloseCssModal();
-                    }}>
-                    Copy to Clipboard
-                  </button>
-                </div>
-              }
+              copy
               showModal={showCssModal}
               modalStyle={modalStyle}
               handleCloseModal={handleCloseCssModal}
+              colorOne={colorOne}
+              colorTwo={colorTwo}
             />
           </div>
         </div>
